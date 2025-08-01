@@ -1,0 +1,10 @@
+MemoryOS==0.2.2
+langchain
+langgraph
+langchain-ollama
+llm
+fastapi
+uvicorn
+pydantic
+python-dotenv
+pip install chonkie

@@ -1,0 +1,19 @@
+{
+  "chat_model": {
+    "backend": "ollama",
+    "config": {
+      "model_name_or_path": "gemma3:4b-it-qat"
+    }
+  },
+  "mem_reader": {
+    "backend": "ollama",
+    "config": {
+      "model_name_or_path": "nomic-embed-text:latest",
+      "datastore": {
+        "type": "sqlite",
+        "path": "./memos_db/memory.sqlite"
+      }
+    }
+  },
+  "process_isolation": false
+}

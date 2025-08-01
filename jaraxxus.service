@@ -1,0 +1,14 @@
+[Unit]
+Description=Jaraxxus AI Agent
+After=network.target
+
+[Service]
+User=taylo
+Group=taylo
+WorkingDirectory=/home/taylo/JRXXS
+ExecStart=/home/taylo/JRXXS/.venv/bin/python /home/taylo/JRXXS/jaraxxus.py
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
