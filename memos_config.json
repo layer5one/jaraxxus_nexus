@@ -1,23 +1,22 @@
 {
+  "user_id": "root",
+
   "chat_model": {
     "backend": "ollama",
     "config": { "model_name_or_path": "gemma3:4b-it-qat" }
   },
+
   "mem_reader": {
-    "backend": "ollama",
+    "backend": "simple_struct",
     "config": {
-      "model_name_or_path": "nomic-embed-text",
+      "embedder": {
+        "backend": "hf_emb",
+        "config": { "model_name_or_path": "all-MiniLM-L6-v2" }
+      },
       "datastore": {
         "type": "sqlite",
         "path": "./memos_db/memory.sqlite"
       }
     }
-  },
-  "graph_store": {
-    "uri": "bolt://localhost:7687",
-    "user": "neo4j",
-    "password": "changeme",
-    "auto_create": true
-  },
-  "process_isolation": false
+  }
 }
